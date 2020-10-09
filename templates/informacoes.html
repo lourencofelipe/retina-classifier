@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Informações</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .img-thumbnail {
+            border-radius: 50%!important;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- <script src="https://{{ url_for('static', filename='scripts/informacoes.js') }}"></script> -->
+
+</head>
+
+<body>
+    <div style="clear:both;">
+        <nav class="navbar navbar-light" style="background-color: #ADD8E6;">
+            <span class="navbar-text ">
+                   <h4 class="h-light">Classificação de imagens de fundo de olho</h4>
+                </span>
+            <a>
+                <button class="btn btn-outline-info" onclick="novaAnalise()" type="button">Nova Análise</button>
+            </a>
+        </nav>
+        <div id="wrapper">
+
+
+            <section id="intro" class="intro">
+                <div class="intro-content pt-3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="wow fadeInUp animated" data-wow-offset="0" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                                    <h4 class="h-light">
+                                        Este projeto tem como objetivo analisar imagens clínicas com base em fotografias digitais de fundo de olho e classificá-las entre as que possuem algum grau de Retinopatia diabética e imagens assintomáticas. O projeto realizado visa auxiliar o diagnóstico
+                                        de forma prática mantendo sua utilização simples.
+                                    </h4>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6 text-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <hr>
+
+            <section id="boxes" class="home-section paddingtop-80 mb-4">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4">
+                            <div class="wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                                <div class="box text-center">
+                                    <div class="container box">
+                                        <img src="{{ url_for('static', filename='images/diabetes-icone-1.jpg')}}" class="img-thumbnail rounded">
+                                    </div>
+                                    <h4 class="h-bold">Crescente número de portadores</h4>
+                                    <p class="text-dark">
+                                        A Diabetes afeta cerca de meio milhão de pessoas ao redor do mundo. Este número tende a aumentar e a perspectiva é que até 2045 cerca de 700 milhões de pessoas estejam vivendo com esta condição.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4">
+                            <div class="wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                                <div class="box text-center">
+                                    <div class="container box">
+                                        <img src="{{ url_for('static', filename='images/retinopatia-01.jpg')}}" class="img-thumbnail rounded">
+                                    </div>
+                                    <h4 class="h-bold">Causa primordial de cegueira entre a faixa da população ativa</h4>
+                                    <p class="text-dark">
+                                        De acordo com a Sociedade brasileira de Diabetes, a Retinopatia Diabética é a principal causa de cegueira em pessoas com idade entre 20 e 74 anos, além de ser a patologia decorrente da diabetes mais comum.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4">
+                            <div class="wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                                <div class="box text-center">
+
+                                    <div class="container box">
+                                        <img src="{{ url_for('static', filename='images/retinopatia-02.jpg')}}" class="img-thumbnail rounded">
+                                    </div>
+                                    <h4 class="h-bold">Presença da Retinopatia</h4>
+                                    <p class="text-dark">
+                                        Existem cerca de 2 milhões de brasileiros com algum grau de Retinopatia e seu crescimento está associado ao aumento de número de diabéticos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <figure class="col-md-6 col-sm-12">
+                        <image src="{{ url_for('static', filename='images/infografico_retinopatia_revista_saude.jpg')}}" class="rounded mx-auto d-block img-fluid" alt="Infográfico retinopatia diabética">
+                            <figcaption class="figure-caption text-center">Fonte: Infográfico retinopatia diabética – revista Saúde.</figcaption>
+                    </figure>
+                </div>
+
+            </section>
+
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js "></script>
+        <!-- <script src="https://{{ url_for('static', filename='scripts/informacoes.js') }}"></script> -->
+        <script type="text/javascript" src="/static/scripts/informacoes.js"></script>
+</body>
+
+</html>

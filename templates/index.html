@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Classificação de imagens de fundo de olho para Retinopatia Diabética</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}"> -->
+    <link rel="stylesheet" href="/static/styles/main.css">
+</head>
+
+<body>
+    <div style="clear:both;">
+        <nav class="navbar navbar-light" style="background-color: #ADD8E6;">
+            <span class="navbar-text ">
+               <h4 class="h-light">Classificação de imagens de fundo de olho</h4>
+            </span>
+            <a>
+                <button class="btn btn-outline-info" onclick="informacoesProjeto()" type="button">Informações</button>
+            </a>
+        </nav>
+    </div>
+    <div class="container-fluid d-flex flex-direction-column justify-content-md-between flex-sm-column flex-md-row align-items-center my-4">
+        <div class="d-flex flex-column justify-content-center align-items-center col-sm-12 col-md-6">
+            <div>
+                <div class="custom-file overflow-hidden rounded-pill mb-5">
+                    <input id="imagem-seletor" type="file" class="custom-file-input rounded-pill">
+                    <label style="width: 50%;" for="imagem-seletor" class="custom-file-label rounded-pill">Escolher arquivo</label>
+                </div>
+                <div class="col-sm-8">
+                    <p style="color: #5e5e5e">A plataforma está treinada para imagens de fundo de olho, ou seja, imagens diferentes terão efeito inesperado sobre a predição do modelo. Apenas imagens dos tipos PNG, JPG e JPEG são aceitas.</p>
+                </div>
+            </div>
+            <div id="table-display" class="table-responsive" style="display: none; padding-top: 1em;">
+                <div class="d-flex justify-content-start pb-2">
+                    <button type="button" class="btn btn-outline-primary btn-sm waves-effect" onclick="imprimirResultado()"><i class="fa fa-print pr-2" aria-hidden="true"></i>Imprimir</button>
+                </div>
+                <h4 style="color:#737373;" class="text-center">Resultados</h4>
+                <table class="table table-striped table-condensed table-hover text-center" id="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" data-field="imagem">Imagem</th>
+                            <th scope="col" data-field="resultado">Resultado</th>
+                            <th scope="col" data-field="precisao">Precisão</th>
+                            <th scope="col" data-field="data">Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="w-25"></td>
+                            <td class="align-middle"></td>
+                            <td class="align-middle"></td>
+                            <td class="align-middle"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="d-flex flex-column justify-content-center align-items-center col-sm-12 col-md-6">
+            <div id="local-imagem" class="local-imagem">
+                <div class="circular--portrait">
+                    <img style="display: none;" id="imagem-selecionada" data-holder-rendered="false" src="" />
+                </div>
+            </div>
+            <div class="mt-5">
+                <a class="classificar">
+                    <button type="button" id="classificarImagem-button" class="btn text-white btn-primary disabled mr-2">Analisar Imagem</button>
+                </a>
+                <a>
+                    <button type="button" id="excluirImagem-button" onclick="excluirImagem()" class="btn btn-outline-danger disabled">Remover Imagem</button>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/main.js"></script>
+    <!-- <script type="" src="https:{{ url_for('static', filename='scripts/main.js') }}"></script> -->
+</body>
+
+</html>
