@@ -1,2 +1,2 @@
-const novaAnalise = () => $.post("https://teste-01-rd.herokuapp.com",
-    window.location.href = "https://teste-01-rd.herokuapp.com");
+const novaAnalise = () => $.post("https://retinaclassifier.herokuapp.com/",
+    window.location.href = "https://retinaclassifier.herokuapp.com/");

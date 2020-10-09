@@ -130,8 +130,8 @@ const validaExtensao = (dataURL) => {
     return extensaoValida;
 }
 
-const informacoesProjeto = () => $.post("https://teste-01-rd.herokuapp.com/informacoes",
-    () => window.location.href = "https://teste-01-rd.herokuapp.com/informacoes");
+const informacoesProjeto = () => $.post("https://retinaclassifier.herokuapp.com/informacoes",
+    () => window.location.href = "https://retinaclassifier.herokuapp.com/informacoes");
 
 $("#local-imagem").click(() => $("#imagem-seletor").trigger('click'));
 
@@ -159,7 +159,7 @@ $("#classificarImagem-button").click(() => {
             image: base64Image
         }
 
-        $.post("https://teste-01-rd.herokuapp.com/predict", JSON.stringify(message), (response) => {
+        $.post("https://retinaclassifier.herokuapp.com/predict", JSON.stringify(message), (response) => {
             if (response.predicao.classeImagem !== undefined || response.predicao.classeImagem !== null)
                 preencheTabela(response);
         });
