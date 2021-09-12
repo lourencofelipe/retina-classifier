@@ -52,7 +52,7 @@ carregarModelo()
 def index():
     return render_template("index.html")
 
-@app.route("/informacoes", methods=['GET', 'POST'])
+@app.route("/informations", methods=['GET', 'POST'])
 def informacoes():
     return render_template("informacoes.html")
 

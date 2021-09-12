@@ -93,7 +93,7 @@ const imprimirResultado = () => {
 
     let tabela = document.getElementById('table');
 
-    let janela = window.open('', '', 'height=600,width=1100');
+    let janela = window.open('', '', 'height=600,width=1000');
 
     let style = "<style>";
     style = style + "table {width: 90%; font: 17px Calibri;}";
@@ -130,8 +130,8 @@ const validaExtensao = (dataURL) => {
     return extensaoValida;
 }
 
-const informacoesProjeto = () => $.post("https://retinaclassifier.herokuapp.com/informacoes",
-    () => window.location.href = "https://retinaclassifier.herokuapp.com/informacoes");
+const informacoesProjeto = () => $.post("https://retinaclassifier.herokuapp.com/informations",
+    () => window.location.href = "https://retinaclassifier.herokuapp.com/informations");
 
 $("#local-imagem").click(() => $("#imagem-seletor").trigger('click'));
 
