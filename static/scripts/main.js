@@ -17,8 +17,8 @@ const limparCampos = () => {
 
 const alertaFormatoImagemInvalido = () => {
     swal({
-        title: "Atenção!",
-        text: "A extensão do arquivo não é válida!",
+        title: "Warning!",
+        text: "The archive extension is not valid!",
         icon: "error",
         button: "ok",
     });

@@ -15,10 +15,10 @@
     <div style="clear:both;">
         <nav class="navbar navbar-light" style="background-color: #ADD8E6;">
             <span class="navbar-text ">
-               <h4 class="h-light">Análise de imagens de fundo de olho na identificação de retinopatia diabética</h4>
+               <h4 class="h-light">Fundus images analysis on Diabetic Retinopathy diagnosis</h4>
             </span>
             <a>
-                <button class="btn btn-outline-info" onclick="informacoesProjeto()" type="button">Informações</button>
+                <button class="btn btn-outline-info" onclick="informacoesProjeto()" type="button">Informations</button>
             </a>
         </nav>
     </div>
@@ -30,12 +30,12 @@
                     <label style="width: 50%;" for="imagem-seletor" class="custom-file-label rounded-pill">Escolher arquivo</label>
                 </div>
                 <div class="col-sm-8">
-                    <p style="color: #5e5e5e">A plataforma está treinada para imagens de fundo de olho, ou seja, imagens diferentes terão efeito inesperado sobre a predição do modelo. Apenas imagens dos tipos PNG, JPG e JPEG são aceitas.</p>
+                    <p style="color: #5e5e5e">This platform is trained with fundus images, therefore, different types of images will have an unexpected result in the model prediction. Only images in PNG, JPG and JPEG formats are accepted.</p>
                 </div>
             </div>
             <div id="table-display" class="table-responsive" style="display: none; padding-top: 1em;">
                 <div class="d-flex justify-content-start pb-2">
-                    <button type="button" class="btn btn-outline-primary btn-sm waves-effect" onclick="imprimirResultado()"><i class="fa fa-print pr-2" aria-hidden="true"></i>Imprimir</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm waves-effect" onclick="imprimirResultado()"><i class="fa fa-print pr-2" aria-hidden="true"></i>Print</button>
                 </div>
                 <h4 style="color:#737373;" class="text-center">Resultados</h4>
                 <table class="table table-striped table-condensed table-hover text-center" id="table">
@@ -68,10 +68,10 @@
             </div>
             <div class="mt-5">
                 <a class="classificar">
-                    <button type="button" id="classificarImagem-button" class="btn text-white btn-primary disabled mr-2">Analisar Imagem</button>
+                    <button type="button" id="classificarImagem-button" class="btn text-white btn-primary disabled mr-2">Analyze image</button>
                 </a>
                 <a>
-                    <button type="button" id="excluirImagem-button" onclick="excluirImagem()" class="btn btn-outline-danger disabled">Remover Imagem</button>
+                    <button type="button" id="excluirImagem-button" onclick="excluirImagem()" class="btn btn-outline-danger disabled">Remove image</button>
                 </a>
             </div>
         </div>
