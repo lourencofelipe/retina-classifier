@@ -42,10 +42,10 @@ const preencheTabela = (response) => {
     let assintomatica = response.predicao.classeImagem == 0;
 
     if (sintomatica) {
-        descricaoResultado.text("Positivo");
+        descricaoResultado.text("Positive");
         precisaoResultado.text(Number(response.predicao.sintomatica).toFixed(3) + "%");
     } else if (assintomatica) {
-        descricaoResultado.text("Negativo");
+        descricaoResultado.text("Negative");
         precisaoResultado.text(Number(response.predicao.assintomatica).toFixed(3) + "%");
     }
 
