@@ -25,10 +25,10 @@
     <div style="clear:both;">
         <nav class="navbar navbar-light" style="background-color: #ADD8E6;">
             <span class="navbar-text ">
-                   <h4 class="h-light">Classificação de imagens de fundo de olho</h4>
+                   <h4 class="h-light">Fundus images classification</h4>
                 </span>
             <a>
-                <button class="btn btn-outline-info" onclick="novaAnalise()" type="button">Nova Análise</button>
+                <button class="btn btn-outline-info" onclick="novaAnalise()" type="button">New Prediction</button>
             </a>
         </nav>
         <div id="wrapper">
@@ -41,8 +41,7 @@
                             <div class="col-lg-6">
                                 <div class="wow fadeInUp animated" data-wow-offset="0" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                                     <h4 class="h-light">
-                                        Este projeto tem como objetivo analisar imagens clínicas com base em fotografias digitais de fundo de olho e classificá-las entre as que possuem algum grau de Retinopatia diabética e imagens assintomáticas. O projeto realizado visa auxiliar o diagnóstico
-                                        de forma prática mantendo sua utilização simples.
+                                        This project has the objective to analyze fundus images and classify them in two types: Positive or negative for Diabetic Retinopathy.
                                     </h4>
                                 </div>
 
@@ -67,9 +66,9 @@
                                     <div class="container box">
                                         <img src="{{ url_for('static', filename='images/diabetes-icone-1.jpg')}}" class="img-thumbnail rounded">
                                     </div>
-                                    <h4 class="h-bold">Crescente número de portadores</h4>
+                                    <h4 class="h-bold">Growing number of carriers</h4>
                                     <p class="text-dark">
-                                        A Diabetes afeta cerca de meio milhão de pessoas ao redor do mundo. Este número tende a aumentar e a perspectiva é que até 2045 cerca de 700 milhões de pessoas estejam vivendo com esta condição.
+                                        Diabetes affects about half a million people worldwide. The perspective is that by 2045 about 700 million people will have this condition.
                                     </p>
                                 </div>
                             </div>
@@ -80,9 +79,10 @@
                                     <div class="container box">
                                         <img src="{{ url_for('static', filename='images/retinopatia-01.jpg')}}" class="img-thumbnail rounded">
                                     </div>
-                                    <h4 class="h-bold">Causa primordial de cegueira entre a faixa da população ativa</h4>
+                                    <h4 class="h-bold">Primary cause of blindness in people aged between 20 and 74 years.</h4>
                                     <p class="text-dark">
-                                        De acordo com a Sociedade brasileira de Diabetes, a Retinopatia Diabética é a principal causa de cegueira em pessoas com idade entre 20 e 74 anos, além de ser a patologia decorrente da diabetes mais comum.
+                                        According to the Brazilian Diabetes Society, Diabetic Retinopathy is the leading cause of blindness in people aged between 20 and 74 years, 
+                                        in addition to being the most common diabetes-related pathology.
                                     </p>
                                 </div>
                             </div>
@@ -94,9 +94,9 @@
                                     <div class="container box">
                                         <img src="{{ url_for('static', filename='images/retinopatia-02.jpg')}}" class="img-thumbnail rounded">
                                     </div>
-                                    <h4 class="h-bold">Presença da Retinopatia</h4>
+                                    <h4 class="h-bold">Presence of Retinopathy</h4>
                                     <p class="text-dark">
-                                        Existem cerca de 2 milhões de brasileiros com algum grau de Retinopatia e seu crescimento está associado ao aumento de número de diabéticos.
+                                        There are about 2 million people in Brazil with some degree of Retinopathy and it's growth is related to the growing number of diabetics.
                                     </p>
                                 </div>
                             </div>
@@ -106,8 +106,8 @@
 
                 <div class="d-flex justify-content-center">
                     <figure class="col-md-6 col-sm-12">
-                        <image src="{{ url_for('static', filename='images/infografico_retinopatia_revista_saude.jpg')}}" class="rounded mx-auto d-block img-fluid" alt="Infográfico retinopatia diabética">
-                            <figcaption class="figure-caption text-center">Fonte: Infográfico retinopatia diabética – revista Saúde.</figcaption>
+                        <image src="{{ url_for('static', filename='images/infografico_retinopatia_revista_saude.jpg')}}" class="rounded mx-auto d-block img-fluid" alt="Infográfico retinopatia diabética" />
+                            <figcaption class="figure-caption text-center">Source: Infográfico retinopatia diabética – revista Saúde.</figcaption>
                     </figure>
                 </div>
 
