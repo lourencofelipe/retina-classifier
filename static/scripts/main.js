@@ -56,12 +56,12 @@ const preencheTabela = (response) => {
 const formatarData = () => {
     let data = new Date()
     const formatoData = {
-        dia: '2-digit',
         mes: '2-digit',
+        dia: '2-digit',
         ano: 'numeric'
     };
 
-    let dataFormatada = data.toLocaleDateString("pt-br", formatoData);
+    let dataFormatada = data.toLocaleDateString("en-US", formatoData);
 
     return dataFormatada;
 }
