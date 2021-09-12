@@ -93,7 +93,7 @@ const imprimirResultado = () => {
 
     let tabela = document.getElementById('table');
 
-    let janela = window.open('', '', 'height=700,width=1200');
+    let janela = window.open('', '', 'height=600,width=1100');
 
     let style = "<style>";
     style = style + "table {width: 90%; font: 17px Calibri;}";
