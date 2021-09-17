@@ -21,7 +21,7 @@ cors = CORS(app, resource={r"/*":{"origins": "*"}})
 
 def carregarModelo():
     global model
-    #model = tf.keras.models.load_model('models/Classificacao_RD_Duas_Categorias_03.h5')
+    
     # Carrega o arquivo do modelo treinado.
     model = load_model('models/Modelo_Duas_Classes_98.h5')
     
