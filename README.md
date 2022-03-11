@@ -79,7 +79,7 @@ At the end, an activation layer is applied using softmax. This function is respo
 
 ### Results
 
-For the prediction model, 89 original images were used, and after processing and data augmentation techniques, 722 images became available for training. Of these, about 20% were used for model validation. The results obtained after 25 epochs were 98% accurate and about 98% accurate.
+For the prediction model, 89 original images were used, and after processing and data augmentation techniques, 722 images became available for training. Of these, about 20% were used for model validation. The results obtained after 25 epochs were 98% accurate and about 98% precision.
 
 The model used has binary classification, the goal is decide wich class the new image can be classified. If has any DR symptom, the image is "Positive", otherwise, if the image is classified as healthy, so, it is "Negative".
 
