@@ -57,7 +57,6 @@ The next step was to mirror all the new images. This method can be very useful f
 
 Another step involving Data Augmentation was rotating the images that showed symptoms. After many tests, the images were rotated at four different angles: 90, 120, 180 and 270 degrees.
 
-
 At the end of the process, the images were like this:
 
 <p align="center">
