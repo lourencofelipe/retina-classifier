@@ -1,5 +1,5 @@
-.pdf
+*.pdf
 /test
 /spec
 /docs
-.jpg
+*.jpg
