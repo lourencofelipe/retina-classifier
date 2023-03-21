@@ -62,7 +62,7 @@ def predict():
     Makes the prediction process for the inserted image.
     INPUT:
         MESSAGE: Recieves the Json from the request.
-        ENCODEDIMAGE:Recieves the value associated with the key 'image' of Json alocated in the variable
+        ENCODEDIMAGE: Recieves the value associated with the key 'image' of Json alocated in the variable
         'message'. The value is the image recieved by the client side in base64 format. 
         DECODEDIMAGE: Makes a b64decode of the image.
         PROCESSEDIMAGE: Recieves an instance of PIL dependence to open an image wich is alocated in memory in base64 format and than, keep the image in a bytes format.
