@@ -130,8 +130,8 @@ const validaExtensao = (dataURL) => {
     return extensaoValida;
 }
 
-const informacoesProjeto = () => $.post("https://retinaclassifier.herokuapp.com/informations",
-    () => window.location.href = "https://retinaclassifier.herokuapp.com/informations");
+const informacoesProjeto = () => $.post("https://retinaclassifier.herokuapp.com/information",
+    () => window.location.href = "https://retinaclassifier.herokuapp.com/information");
 
 $("#local-imagem").click(() => $("#imagem-seletor").trigger('click'));
 
