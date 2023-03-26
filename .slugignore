@@ -10,7 +10,7 @@
 /target
 instance/
 /README.md
-/static/images
+/static/images/
 *.manifest
 *.spec
 pip-log.txt
