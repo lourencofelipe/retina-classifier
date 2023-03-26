@@ -9,6 +9,8 @@
 *.pot
 /target
 instance/
+/README.md
+/static/images
 *.manifest
 *.spec
 pip-log.txt
