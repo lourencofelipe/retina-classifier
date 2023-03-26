@@ -2,5 +2,7 @@
 /test
 /spec
 /docs
-/images
 *.jpg
+*.log
+*.pyc
+static/images
