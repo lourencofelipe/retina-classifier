@@ -1,6 +1,7 @@
 *.pdf
 /test
 /spec
+/app
 /docs
 *.log
 *.pyc
