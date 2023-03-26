@@ -6,15 +6,6 @@
 *.pyc
 *.mo
 *.pot
-/static/images/cnn_arch.JPG
-/static/images/model_hierarchy.jpg
-/static/images/predict_example_.png
-/static/images/predict_example.JPG
-/static/images/processed_images.JPG
-/static/images/retinas.JPG
-/static/images/scope_hierarchy.jpg
-/static/images/tech_stack.png
-
 /target
 instance/
 *.manifest
