@@ -19,7 +19,7 @@ app = Flask(__name__)
 
 cors = CORS(app, resource={r"/*":{"origins": "*"}})
 
-def carregarModelo():
+def loadModel():
     global model
     
     # Load the trained model.
@@ -27,7 +27,7 @@ def carregarModelo():
     
     return model
 
-def processarImagem(imagem, tamanhoEsperado):
+def processImage(image, expectedSize):
    '''
     Process the image inserted by the interface. Checks if the image is RGB, resizes it to the expected size and converts it to an array.
     INPUT
@@ -36,23 +36,23 @@ def processarImagem(imagem, tamanhoEsperado):
     OUTPUT:
         Returns the processed image.
     '''
-    if imagem.mode != "RGB":
-        imagem = imagem.convert("RGB")
-    imagem = imagem.resize(tamanhoEsperado)
-    imagem = img_to_array(imagem)
-    imagem = imagem.astype('float32') 
-    imagem /= 255
+    if image.mode != "RGB":
+        image = image.convert("RGB")
+    image = image.resize(expectedSize)
+    image = img_to_array(image)
+    image = image.astype('float32') 
+    image /= 255
 
-    return imagem
+    return image
 
-carregarModelo()
+loadModel()
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
     return render_template("index.html")
 
 @app.route("/information", methods=['GET', 'POST'])
-def informacoes():
+def information():
     return render_template("informacoes.html")
 
 # Makes a request to the prediction model.
@@ -71,26 +71,26 @@ def predict():
         Dictionary which will be sent to the client side. Contains the keys responsible for prediction with the values that the model returns.
     '''
     message = request.get_json(force = True)
-    imagemCodificada = message['image']
-    imagemDecodificada = base64.b64decode(imagemCodificada)
-    imagem = Image.open(io.BytesIO(imagemDecodificada))
-    imagemProcessada = processarImagem(imagem, tamanhoEsperado=(256, 239))
+    encodedImage = message['image']
+    decodedImage = base64.b64decode(encodedImage)
+    image = Image.open(io.BytesIO(decodedImage))
+    processedImage = processImage(image, expectedSize=(256, 239))
     
-    predicao = model.predict(np.expand_dims(imagemProcessada, axis = 0))
+    prediction = model.predict(np.expand_dims(processedImage, axis = 0))
 
-    # Class of the analysed image.
-    rotuloImagemAnalisada = model.predict_classes(np.expand_dims(imagemProcessada, axis = 0)).tolist()
+    # Class of the analyzed image.
+    labelAnalyzedImage = model.predict_classes(np.expand_dims(processedImage, axis = 0)).tolist()
     
     # Predictions for the images classes.
-    predicaoPositiva = (predicao[:,1] * 100).tolist() 
-    predicaoNegativa = (predicao[:,0] * 100).tolist()
+    positivePrediction = (prediction[:,1] * 100).tolist() 
+    negativePrediction = (prediction[:,0] * 100).tolist()
 
    # Sends the formatted response to the client side.
     response = {
         'predicao': {
-            'sintomatica': predicaoPositiva,
-            'assintomatica': predicaoNegativa,
-            'classeImagem': rotuloImagemAnalisada
+            'sintomatica': positivePrediction,
+            'assintomatica': negativePrediction,
+            'classeImagem': labelAnalyzedImage
         }
     }
     
