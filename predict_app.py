@@ -1,17 +1,17 @@
 from flask import Flask, request, jsonify, render_template
 from keras.preprocessing.image import img_to_array
-from keras.models import Sequential
+#from keras.models import Sequential
 from keras.models import load_model
 from keras import backend as K
 from flask_cors import CORS
-import tensorflow as tf
+#import tensorflow as tf
 from PIL import Image
-import keras.models
+#import keras.models
 import numpy as np
 import base64
-import sys
+#import sys
 import io
-import re 
+#import re 
 import os
 
 # Initiate Flask.
