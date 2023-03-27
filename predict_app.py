@@ -28,7 +28,7 @@ def loadModel():
     return model
 
 def processImage(image, expectedSize):
-   '''
+    '''
     Process the image inserted by the interface. Checks if the image is RGB, resizes it to the expected size and converts it to an array.
     INPUT
         IMAGE: Inserted image.
@@ -36,6 +36,7 @@ def processImage(image, expectedSize):
     OUTPUT:
         Returns the processed image.
     '''
+    
     if image.mode != "RGB":
         image = image.convert("RGB")
     image = image.resize(expectedSize)
