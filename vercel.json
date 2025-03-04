@@ -9,7 +9,7 @@
     "routes": [
       {
         "src": "(.*)",
-        "dest": "/predict_app.py"
+        "dest": "predict_app.py"
       }
     ]
   }
