@@ -1,5 +1,15 @@
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/predict_app.py" }
+    "version": 2,
+    "builds": [
+      {
+        "src": "/predict_app.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "(.*)",
+        "dest": "/predict_app.py"
+      }
     ]
   }
